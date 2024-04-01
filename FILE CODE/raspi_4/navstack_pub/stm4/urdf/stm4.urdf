@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="stm4">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.25517378671058 -0.00181228572462262 0.156498805498109"
+        rpy="0 0 0" />
+      <mass
+        value="16.7329365129196" />
+      <inertia
+        ixx="0.172855937762859"
+        ixy="3.89441921854557E-05"
+        ixz="-2.42587790824463E-06"
+        iyy="0.288951783478693"
+        iyz="6.98601645134476E-07"
+        izz="0.323249471355872" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stm4/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stm4/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_wheel_link">
+    <inertial>
+      <origin
+        xyz="9.2598286371981E-08 -1.54210307801161E-07 -1.14106963544636E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.437369508655428" />
+      <inertia
+        ixx="0.00124386257763115"
+        ixy="7.50652122497844E-11"
+        ixz="-1.26384427493545E-09"
+        iyy="0.0022436321498788"
+        iyz="3.54433134448488E-10"
+        izz="0.00124386746814942" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stm4/meshes/right_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stm4/meshes/right_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.174 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="left_wheel_link">
+    <inertial>
+      <origin
+        xyz="-9.25982864830033E-08 1.54210307773406E-07 -1.14106962989524E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.437369508655435" />
+      <inertia
+        ixx="0.00124386257763119"
+        ixy="7.5065213059286E-11"
+        ixz="1.26384427745489E-09"
+        iyy="0.00224363214987883"
+        iyz="-3.54433132539319E-10"
+        izz="0.00124386746814941" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stm4/meshes/left_wheel_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stm4/meshes/left_wheel_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_joint"
+    type="continuous">
+    <origin
+      xyz="0 0.174 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="caster_link">
+    <inertial>
+      <origin
+        xyz="-1.4210854715202E-14 2.47371567674293E-15 3.08642000845794E-14"
+        rpy="0 0 0" />
+      <mass
+        value="0.0402435516899715" />
+      <inertia
+        ixx="8.24430838303773E-06"
+        ixy="-1.11739180266212E-19"
+        ixz="-8.9517679673132E-22"
+        iyy="1.32754204889857E-05"
+        iyz="-7.64256211981795E-21"
+        izz="8.24430838303773E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stm4/meshes/caster_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://stm4/meshes/caster_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="caster_joint"
+    type="fixed">
+    <origin
+      xyz="0.56036 2.975E-05 -0.075275"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="caster_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+    
+  <joint name="hokuyo_joint" type="fixed">
+    <axis xyz="0 1 0" />
+    <origin xyz="0.5861 -0.00013377 0.60032" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="hokuyo_link"/>
+  </joint>
+
+  <!-- Hokuyo Laser -->
+  <link name="hokuyo_link">
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.1 0.1 0.1"/>
+      </geometry>
+    </collision>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://stm4/meshes/hokuyo.dae"/>
+      </geometry>
+    </visual>
+
+    <inertial>
+     <mass value="1e-5" />
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6" />
+    </inertial>
+  </link>
+
+  
+</robot>
