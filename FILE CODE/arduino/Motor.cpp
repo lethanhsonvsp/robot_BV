@@ -4,11 +4,9 @@ Motor::Motor(int plus, int minus, int pin) {
   pinMode(pin,OUTPUT);
   pinMode(plus,OUTPUT);
   pinMode(minus,OUTPUT);
-  pinMode(en_a,INPUT_PULLUP);
-  pinMode(en_b,INPUT_PULLUP);
   Motor::plus = plus;
   Motor::minus = minus;
-  Motor::pin = p
+  Motor::pin = pin;
 }
 void Motor::rotate(int value) {
   digitalWrite(pin,HIGH);
