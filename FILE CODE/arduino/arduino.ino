@@ -92,10 +92,10 @@ void loop()
     }
     else
     {
-      demand_speed_left = demandx - (demandz * 0.1075);
-      demand_speed_right = demandx + (demandz * 0.1075);
-      left_setpoint = demand_speed_left * 40;
-      right_setpoint = demand_speed_right * 40;
+      demand_speed_left = demandx/0.1075 - (demandz * 1);
+      demand_speed_right = demandx/0.1075 + (demandz * 1);
+      left_setpoint = demand_speed_left * 4;
+      right_setpoint = demand_speed_right * 4;
       leftPID.Compute();
       rightPID.Compute();
     }
