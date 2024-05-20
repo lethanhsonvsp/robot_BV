@@ -1,6 +1,7 @@
 #ifndef Motor_h
 #define Motor_h
 #include "Arduino.h"
+
 class Motor {
   public:
     //Constructor - Plus and Minus are the Motor output / en_a and en_b are the encoder inputs
