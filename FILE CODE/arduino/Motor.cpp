@@ -8,6 +8,7 @@ Motor::Motor(int plus, int minus, int pin) {
   Motor::minus = minus;
   Motor::pin = pin;
 }
+
 void Motor::rotate(int value) {
   digitalWrite(pin,HIGH);
   if(value>=0){
