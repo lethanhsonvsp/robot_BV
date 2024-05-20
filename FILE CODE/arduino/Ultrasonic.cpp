@@ -5,6 +5,7 @@ Ultrasonic::Ultrasonic(int trigPin, int echoPin) {
   pinMode(trigPin, OUTPUT);
  pinMode(echoPin, INPUT);
 }
+
 long Ultrasonic::getDistance() {
   digitalWrite(trigPin, LOW);delayMicroseconds(2);
   digitalWrite(trigPin, HIGH);delayMicroseconds(10);
